@@ -1,0 +1,14 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: consumer-service # 服务名称
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      server-addr: localhost # nacos地址
+      config:
+        file-extension: yaml
+        shared-configs:
+          - data-id: shared-log.yaml
